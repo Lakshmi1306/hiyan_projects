@@ -1,0 +1,7 @@
+ALTER USER 'chibbs'@'localhost' IDENTIFIED WITH mysql_native_password BY 'chibbss';
+
+create database chibbss;
+
+grant CREATE,INSERT,DELETE,UPDATE,SELECT on chibbss.* to chibbs@localhost identified by 'chibbss';
+
+
