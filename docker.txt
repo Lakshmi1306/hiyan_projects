@@ -1,0 +1,89 @@
+# Define the base image on top of which we are going to customize
+FROM ubuntu:latest
+
+# Define the Createor and Maintainer of this image
+MAINTAINER Sarav AK <aksarav@middlewareinventory.com>
+
+# Run the command to install apache as a prerequisite
+RUN apt-get update && apt-get install -y apache2
+
+# Run the command to Create a DocumentRoot
+RUN mkdir -p /var/www/html/devopsjunction
+
+# Copy the file from the Current Host Directory to the Container
+ADD default-website.conf /etc/apache2/sites-available/
+ADD index.html /var/www/html/devopsjunction
+
+# Run one more command to change the ownership of the file we copied
+RUN chown root:root /etc/apache2/sites-available/default-website.conf
+
+# Enable this website using a2ensite - command
+RUN a2ensite default-website
+
+# Say that our application is exposing a Port
+EXPOSE 80
+
+# the Default command and the Command to start the app in our container
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
+
+RUN: Can be many, and it is used in build process, e.g. install multiple libraries
+Can only have 1, which is your execute start point (e.g. ["npm", "start"], ["node", "app.js"])
+
+
+yml---
+
+version: '3'
+services:
+  web:
+    image: nginx
+  db:
+    image: mysql
+    ports:
+    - "3306:3306"
+    environment:
+    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_USER=user
+    - MYSQL_PASSWORD=password
+    - MYSQL_DATABASE=demodb
+
+
+docker create --name my-nginx \
+  --network my-net \
+  --publish 8080:80 \
+  nginx:latest
+
+
+# Start the NodeJS Container and link it with Redis Container
+➜  docker container run -it -d --name nodejsserver01 --link redisnode01 my-nodejs
+3eb4a3bf3e70686259d4e66e607144dc9145f464c599333b36c2f3628634c112
+
+# Start the Haproxy Container and link it with NodeJS Container
+➜  docker container run -it -d --name haproxyserver --publish 90:80 --link nodejsserver01 my-haproxy
+
+
+
+
+
+
+# copywarfile.yml
+---
+- hosts: all 
+  become: true
+  tasks: 
+    - name: copy jar/war onto tomcat servers
+        copy:
+          src: /op/playbooks/wabapp/target/webapp.war
+          dest: /opt/apache-tomcat-8.5.32/webapps
+
+
+mkdir /opt/docker
+
+### vi Dockerfile
+# Pull base image 
+From tomcat:8-jre8 
+
+# Maintainer
+MAINTAINER "valaxytech@gmail.com" 
+
+# copy war file on to container 
+COPY ./webapp.war /usr/local/tomcat/webapps
