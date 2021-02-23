@@ -1,0 +1,35 @@
+https://lacke.mn/blog/continuous-integration-using-gitlab-with-elastic-beanstalk/
+https://am2.myprofessionalmail.com/appsuite/#!!&app=io.ox/mail&folder=default0//rc%7Bp7Urb%7Ck
+https://linuxize.com/post/how-to-install-mongodb-on-ubuntu-20-04/
+https://stackoverflow.com/questions/18908426/increasing-client-max-body-size-in-nginx-conf-on-aws-elastic-beanstalk
+https://github.com/tlackemann/nodejs-es6-ci/blob/master/.gitlab-ci.yml
+https://www.howtoforge.com/create-a-vpc-on-aws-using-terraform/#:~:text=Create%20a%20VPC%20and%20other%20dependent%20resources%20using,installs%20plugins%20for%20providers%20used%20within%20the%20configuration.
+https://www.infinitypp.com/ansible/create-vpc-ansible-aws/
+https://blog.shikisoft.com/accessing-aws-resources-using-python-scripts/
+https://roopu.cloud/how-to-create-vpc-using-terraform/
+https://learn.hashicorp.com/tutorials/terraform/aws-build
+https://www.onlineinterviewquestions.com/pdfs/terraform-interview-questions.pdf
+https://cloudacademy.com/blog/building-ansible-playbooks-step-by-step/
+https://dev.to/ruanbekker/setup-a-gitlab-ci-runner-on-your-own-server-4p2j#:~:text=%20Setup%20a%20Gitlab-CI%20Runner%20on%20your%20Own,know%20what%20you%20think.%20%20..%20More%20
+https://cloudacademy.com/blog/aws-bastion-host-nat-instances-vpc-peering-security/
+https://medium.com/@ratulbasak93/mongodb-relication-in-ubuntu-16-04-acd5baf744a3
+https://cloudacademy.com/blog/going-deeper-into-ansible-playbooks/
+https://docs.aws.amazon.com/quickstart/latest/mongodb/deployment.html
+https://phoenixnap.com/kb/redirect-http-to-https-nginx
+https://linuxize.com/post/nginx-reverse-proxy/
+https://www.howtoforge.com/aws-lambda-function-to-start-and-stop-ec2-instance/
+
+----------------php------
+
+https://askubuntu.com/questions/55280/phpmyadmin-is-not-working-after-i-installed-it
+https://blog.iseatz.com/ec2-plugin-jenkins-automatically-provision/
+https://docs.aws.amazon.com/systems-manager/latest/userguide/automation-jenkins.html
+https://www.howtoforge.com/tutorial/write-a-custom-nagios-check-plugin/
+http://shahzadlinux.blogspot.com/2019/04/how-to-stop-and-start-ec2-instance.html
+
+
+sudo growpart /dev/xvda 1
+lsblk
+sudo resize2fs /dev/xvda1
+df -h
+
